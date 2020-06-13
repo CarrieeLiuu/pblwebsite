@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Valley Consulting Group</title>
+    <meta name="description" content="Valley Consulting Group" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1024">
+	<meta property="og:image:height" content="1024">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <img src="images/logo.png" style="display: none">
+    <iframe src="https://valleyconsulting.squarespace.com/" height="100%">
+    </iframe>
+</body>
+
+<script>
+    window.addEventListener('message', function(event) {
+        if (event.data == 'home') {
+            window.history.pushState('', '','/');
+            document.title = "Valley Consulting Group";
+        } else if (event.data == 'about') {
+            window.history.pushState('', '','about');
+            document.title = "About — Valley Consulting Group";
+        } else if (event.data == 'services') {
+            window.history.pushState('', '','services');
+            document.title = "Services — Valley Consulting Group";
+        } else if (event.data == 'members') {
+            window.history.pushState('', '','members');
+            document.title = "Member Portal — Valley Consulting Group";
+        } else if (event.data == 'contact') {
+            window.history.pushState('', '','contact');
+            document.title = "Contact — Valley Consulting Group";
+        } else if (event.data == 'join') {
+            window.history.pushState('', '','join');
+            document.title = "Join Us — Valley Consulting Group";
+        } else if (event.data == 'application') {
+            window.history.pushState('', '','application');
+            document.title = "Consultant Application — Valley Consulting Group";
+        }
+    });
+</script>
